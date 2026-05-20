@@ -3,8 +3,8 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/15web/filament-tree.svg?style=flat-square)](https://packagist.org/packages/15web/filament-tree)
 [![Build and check code status](https://github.com/15web/filament-tree/actions/workflows/check.yml/badge.svg)](https://github.com/15web/filament-tree/actions)
 ![PHP Version](https://img.shields.io/badge/PHP-8.2-blue?style=flat-square&logo=php)
-![Laravel Version](https://img.shields.io/badge/Laravel-11.0-red?style=flat-square&logo=laravel)
-![Filament Version](https://img.shields.io/badge/Filament-3.2-orange?style=flat-square)
+![Laravel Version](https://img.shields.io/badge/Laravel-11.28-red?style=flat-square&logo=laravel)
+![Filament Version](https://img.shields.io/badge/Filament-4.x-orange?style=flat-square)
 
 #### Build the tree from your Eloquent model with Filament
 
@@ -17,7 +17,7 @@ Advantages of the plugin:
   re-rendered).
 - “Rememberability” of the collapse state. By default, all nodes are collapsed, as a result, the “children” are not
   rendered so the page loads quickly.
-- Display of any attributes (available here https://filamentphp.com/docs/3.x/infolists/entries/getting-started) of model
+- Display of any attributes (available here https://filamentphp.com/docs/4.x/infolists/entries/getting-started) of model
   in the tree, which can be useful for content visualization
 - The component is all-sufficient as a resource, there is no need for separate pages for creating, editing, listing
   models.
@@ -173,7 +173,7 @@ public static function getEditForm(): array
 ```
 
 Read more about form fields at  
-https://filamentphp.com/docs/3.x/forms/getting-started
+https://filamentphp.com/docs/4.x/forms/getting-started
 
 ![Create Form](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/create.jpg?raw=true)  
 ![Edit form](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/edit.jpg?raw=true)  
@@ -228,11 +228,11 @@ public static function getInfolistColumns(): array
 ```
 
 Read more at  
-https://filamentphp.com/docs/3.x/infolists/entries/getting-started#available-entries
+https://filamentphp.com/docs/4.x/infolists/entries/getting-started#available-entries
 
 Please note,  
 created tree page extends Filament Page, so all customizations are available.  
-Get know about at https://filamentphp.com/docs/3.x/panels/pages
+Get know about at https://filamentphp.com/docs/4.x/panels/pages
 
 ### Localization
 
