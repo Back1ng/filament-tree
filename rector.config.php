@@ -15,7 +15,7 @@ return RectorConfig::configure()
     ->withParallel()
     ->withImportNames(importShortClasses: false)
     ->withSets([
-        LaravelLevelSetList::UP_TO_LARAVEL_110,
+        LaravelLevelSetList::UP_TO_LARAVEL_120,
     ])
     ->withAttributesSets()
     ->withPreparedSets(
