@@ -7,8 +7,8 @@ namespace Studio15\FilamentTree\Components;
 use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
 use Filament\Actions\CreateAction;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
+use Filament\Schemas\Concerns\InteractsWithSchemas;
+use Filament\Schemas\Contracts\HasSchemas;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\QueryBuilder;
@@ -19,10 +19,10 @@ use Studio15\FilamentTree\Components\Form\ParentSelect;
 /**
  * Header component
  */
-final class Header extends Component implements HasForms, HasActions
+final class Header extends Component implements HasActions, HasSchemas
 {
     use InteractsWithActions;
-    use InteractsWithForms;
+    use InteractsWithSchemas;
 
     /**
      * @var class-string<TreePage>
@@ -38,7 +38,7 @@ final class Header extends Component implements HasForms, HasActions
 
         $this->configureAction($action);
 
-        $action->form([
+        $action->schema([
             ParentSelect::make($model instanceof QueryBuilder ? $model : $model::query()),
             ...$this->component::getCreateForm(),
         ]);
@@ -58,7 +58,7 @@ final class Header extends Component implements HasForms, HasActions
         if ($this->component::getModel() instanceof QueryBuilder) {
             $action
                 ->model($model->getModel()::class)
-                ->mutateFormDataUsing(
+                ->mutateDataUsing(
                     static fn (array $data): array => [
                         ...$data,
                         ...$model->getModel()->getAttributes(),

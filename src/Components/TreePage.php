@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Studio15\FilamentTree\Components;
 
+use BackedEnum;
 use Filament\Forms\Components\Field;
 use Filament\Infolists\Components\Entry;
 use Filament\Pages\Page;
@@ -19,9 +20,9 @@ use Studio15\FilamentTree\Exception\InvalidModel;
  */
 abstract class TreePage extends Page
 {
-    protected static ?string $navigationIcon = 'heroicon-o-bars-3-bottom-right';
+    protected static BackedEnum|string|null $navigationIcon = 'heroicon-o-bars-3-bottom-right';
 
-    protected static string $view = 'filament-tree::tree';
+    protected string $view = 'filament-tree::tree';
 
     /**
      * Model class or scoped query

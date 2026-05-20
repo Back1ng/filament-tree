@@ -8,11 +8,10 @@ use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
-use Filament\Infolists\Concerns\InteractsWithInfolists;
-use Filament\Infolists\Contracts\HasInfolists;
-use Filament\Infolists\Infolist;
+use Filament\Schemas\Components\Flex;
+use Filament\Schemas\Concerns\InteractsWithSchemas;
+use Filament\Schemas\Contracts\HasSchemas;
+use Filament\Schemas\Schema;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NestedSet;
@@ -28,11 +27,10 @@ use Studio15\FilamentTree\Components\Form\ParentSelect;
 /**
  * Tree node component
  */
-final class Row extends Component implements HasForms, HasActions, HasInfolists
+final class Row extends Component implements HasActions, HasSchemas
 {
     use InteractsWithActions;
-    use InteractsWithForms;
-    use InteractsWithInfolists;
+    use InteractsWithSchemas;
 
     public Model $row;
 
@@ -83,7 +81,7 @@ final class Row extends Component implements HasForms, HasActions, HasInfolists
 
         return EditAction::make()
             ->record(fn (array $arguments): Model => $this->row)
-            ->form($form)
+            ->schema($form)
             ->after(function (Model $record): void {
                 if (!config('filament-tree.show-parent-select-while-edit')) {
                     return;
@@ -124,12 +122,14 @@ final class Row extends Component implements HasForms, HasActions, HasInfolists
             ->labeledFrom('md');
     }
 
-    public function infolist(Infolist $infolist): Infolist
+    public function infolist(Schema $schema): Schema
     {
-        return $infolist
+        return $schema
             ->record($this->row)
-            ->schema($this->component::getInfolistColumns())
-            ->view('filament-tree::infolist');
+            ->inlineLabel()
+            ->components([
+                Flex::make($this->component::getInfolistColumns()),
+            ]);
     }
 
     #[On('filament-tree-refresh.{rowId}')]
