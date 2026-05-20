@@ -1,1 +1,141 @@
-div+.studio15-tree{padding-top:1rem}.studio15-tree{min-height:1rem}.filament-tree-infolist .fi-in-entry-wrp>div{display:flex;align-items:center;padding-right:.75rem}.filament-tree-infolist .fi-in-entry-wrp .fi-in-entry-wrp-label{padding-right:.5rem}.filament-tree-infolist .fi-in-entry-wrp .fi-in-entry-wrp-label span{color:rgba(var(--gray-400),var(--tw-text-opacity,1));font-weight:400}
+/*
+ * Filament Tree — self-contained styles.
+ * Filament v4 no longer ships Tailwind utility classes, so the plugin
+ * styles its own markup here instead of relying on the host's utilities.
+ */
+
+#studio15-tree {
+    padding: 0.75rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark #studio15-tree {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+#studio15-tree nav {
+    font-size: 0.875rem;
+}
+
+.studio15-tree {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-height: 0.5rem;
+}
+
+.studio15-tree .studio15-tree {
+    padding-top: 0.5rem;
+    padding-inline-start: 1.5rem;
+}
+
+.studio15-tree > li + li {
+    margin-top: 0.5rem;
+}
+
+.studio15-tree-empty {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* --- row --- */
+
+.tree-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.dark .tree-row {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.tree-row-handler {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.25rem;
+}
+
+.tree-row-toggle,
+.tree-row-grip {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--gray-400, #9ca3af);
+}
+
+.tree-row-toggle {
+    cursor: pointer;
+}
+
+.tree-row-grip {
+    cursor: grab;
+}
+
+.tree-row-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.tree-row-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.tree-row-title {
+    color: var(--gray-700, #374151);
+}
+
+.dark .tree-row-title {
+    color: var(--gray-200, #e5e7eb);
+}
+
+.tree-row-caption {
+    font-size: 0.8125rem;
+    color: var(--gray-400, #9ca3af);
+}
+
+.tree-row-infolist {
+    flex-shrink: 0;
+}
+
+.tree-row-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.5rem;
+}
+
+/* --- header / footer bars --- */
+
+.studio15-tree-header {
+    margin-bottom: 1rem;
+}
+
+.studio15-tree-footer {
+    margin-top: 1rem;
+}
+
+.studio15-tree-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}

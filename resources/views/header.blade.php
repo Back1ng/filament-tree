@@ -1,6 +1,6 @@
-<div class="pb-4">
-    <div class="flex justify-end items-center gap-3">
-        <div>{{ $this->createAction }}</div>
+<div class="studio15-tree-header">
+    <div class="studio15-tree-bar">
+        {{ $this->createAction }}
     </div>
 
     <x-filament-actions::modals />
