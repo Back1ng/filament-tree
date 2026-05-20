@@ -1,5 +1,5 @@
 {
-    "name": "15web/filament-tree",
+    "name": "back1ng/filament-tree",
     "description": "Tree builder for Eloquent models",
     "license": "MIT",
     "keywords": [
@@ -14,7 +14,7 @@
             "homepage": "https://www.15web.ru"
         }
     ],
-    "homepage": "https://github.com/15web/filament-tree",
+    "homepage": "https://github.com/Back1ng/filament-tree",
     "require": {
         "php": "^8.2",
         "filament/support": "^4.0",

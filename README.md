@@ -1,7 +1,7 @@
 # Eloquent tree with Filament
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/15web/filament-tree.svg?style=flat-square)](https://packagist.org/packages/15web/filament-tree)
-[![Build and check code status](https://github.com/15web/filament-tree/actions/workflows/check.yml/badge.svg)](https://github.com/15web/filament-tree/actions)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/back1ng/filament-tree.svg?style=flat-square)](https://packagist.org/packages/back1ng/filament-tree)
+[![Build and check code status](https://github.com/Back1ng/filament-tree/actions/workflows/check.yml/badge.svg)](https://github.com/Back1ng/filament-tree/actions)
 ![PHP Version](https://img.shields.io/badge/PHP-8.2-blue?style=flat-square&logo=php)
 ![Laravel Version](https://img.shields.io/badge/Laravel-11.28-red?style=flat-square&logo=laravel)
 ![Filament Version](https://img.shields.io/badge/Filament-4.x-orange?style=flat-square)
@@ -24,8 +24,8 @@ Advantages of the plugin:
 - For integration, it is enough to add just a trait (or two, if there was no integration with Nested Set) to the model
   and specify the name of the attribute that will be used as the node header in the tree.
 
-![Dark Theme](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/dark.jpg?raw=true)  
-![Light Theme](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/light.jpg?raw=true)
+![Dark Theme](https://raw.githubusercontent.com/Back1ng/filament-tree/refs/heads/main/assets/dark.jpg?raw=true)  
+![Light Theme](https://raw.githubusercontent.com/Back1ng/filament-tree/refs/heads/main/assets/light.jpg?raw=true)
 
 Table of Contents:
 
@@ -38,12 +38,12 @@ Table of Contents:
 
 ## Installation
 
-![Installation](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/install.jpg?raw=true)
+![Installation](https://raw.githubusercontent.com/Back1ng/filament-tree/refs/heads/main/assets/install.jpg?raw=true)
 
 You can install the package via composer:
 
 ```bash
-composer require 15web/filament-tree
+composer require back1ng/filament-tree
 ```
 
 Add the plugin service provider to  `bootstrap/providers.php`:
@@ -175,9 +175,9 @@ public static function getEditForm(): array
 Read more about form fields at  
 https://filamentphp.com/docs/4.x/forms/getting-started
 
-![Create Form](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/create.jpg?raw=true)  
-![Edit form](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/edit.jpg?raw=true)  
-![Delete Confirmation](https://raw.githubusercontent.com/15web/filament-tree/refs/heads/main/assets/delete.jpg?raw=true)
+![Create Form](https://raw.githubusercontent.com/Back1ng/filament-tree/refs/heads/main/assets/create.jpg?raw=true)  
+![Edit form](https://raw.githubusercontent.com/Back1ng/filament-tree/refs/heads/main/assets/edit.jpg?raw=true)  
+![Delete Confirmation](https://raw.githubusercontent.com/Back1ng/filament-tree/refs/heads/main/assets/delete.jpg?raw=true)
 
 That's all!  
 Now you can manage your tree based on the model!
@@ -290,7 +290,7 @@ To do this, use the button "Fix tree" at the footer of your tree page.
 ## Support and feedback
 
 If you find a bug, please submit an issue directly to GitHub.
-[Filament Tree Issues](https://github.com/15web/filament-tree/issues)
+[Filament Tree Issues](https://github.com/Back1ng/filament-tree/issues)
 
 As always, if you need further support, please contact us.
 https://www.15web.ru/contacts
